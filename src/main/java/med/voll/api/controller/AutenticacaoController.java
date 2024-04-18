@@ -50,7 +50,7 @@ public class AutenticacaoController {
 
         repository.save(usuario);
 
-        return ResponseEntity.ok("Usuário "+ usuario.getLogin() + " criado com sucesso! ");
+        return ResponseEntity.ok("Usuário "+ usuario.getLogin() + " criado com sucesso! testando");
     }
 
 
