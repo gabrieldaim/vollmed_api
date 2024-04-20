@@ -1,6 +1,5 @@
 package med.voll.api.domain.consulta;
 
-import jakarta.validation.ValidationException;
 import med.voll.api.domain.ValidacaoException;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.medico.MedicoRepository;
@@ -39,13 +38,13 @@ public class AgendaDeConsultas {
         consultaRepository.save(consulta);
     }
 
-    private Medico escolherMedico(DadosAgendamentoConsulta dados) {
+    private Medico escolherMedico(DadosAgendamentoConsulta dados) throws ValidacaoException {
         if(dados.idMedico() !=null){
             return medicoRepository.getReferenceById(dados.idMedico());
         }
 
         if(dados.especialidade() == null){
-            throw new ValidationException("Especialidade é obrigatória quando o médico não é escolhido!");
+            throw new ValidacaoException("Especialidade é obrigatória quando o médico não é escolhido!");
         }
 
         return medicoRepository.escolherMedicoAleatoriaLivreNaData(dados.especialidade(),dados.data());
