@@ -1,6 +1,7 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
+import med.voll.api.domain.ValidacaoException;
 import med.voll.api.domain.consulta.AgendaDeConsultas;
 import med.voll.api.domain.consulta.ConsultaRepository;
 import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
@@ -20,7 +21,7 @@ public class ConsultaController {
     private AgendaDeConsultas agenda;
 
     @PostMapping
-    public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
+    public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) throws ValidacaoException {
         agenda.agendar(dados);
         return ResponseEntity.ok(new DadosDetalhamentoConsulta(null,null,null,null));
     }
