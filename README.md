@@ -10,8 +10,8 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
 
 - [x] CRUD de médicos;
 - [x] CRUD de pacientes;
-- [ ] Agendamento de consultas(em breve);
-- [ ] Cancelamento de consultas(em breve);
+- [x] Agendamento de consultas;
+- [x] Cancelamento de consultas;
 
 ---
 
@@ -41,10 +41,15 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ---
 
+## PARA RODAR EM PROD
+
+java -jar .\target\api-0.0.1-SNAPSHOT.jar --s
+pring.profiles.active=prod --DATASOURCE_URL=jdbc:mysql://localhost/vollmed_api --DATASORCE_USERNAME=root --DATASORCE_PASSWORD=root
+
+---
+
 ## 📝 Licença
 
 Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
 
 Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira) 
-
----
