@@ -43,8 +43,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ## PARA RODAR EM PROD
 
-java -jar .\target\api-0.0.1-SNAPSHOT.jar --s
-pring.profiles.active=prod --DATASOURCE_URL=jdbc:mysql://localhost/vollmed_api --DATASORCE_USERNAME=root --DATASORCE_PASSWORD=root
+java -jar .\target\api-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod --DATASOURCE_URL=jdbc:mysql://localhost/vollmed_api --DATASORCE_USERNAME=root --DATASORCE_PASSWORD=root
 
 ---
 
